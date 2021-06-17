@@ -16,12 +16,18 @@ class Cannon {
     }
 
     fill("#676e6a");
+    
     push();
+    
     translate(this.x, this.y);
     rotate(this.angle);
+    //creating base of cannon
     rect(-10, -20, this.width, this.height);
+    
     pop();
-    arc(this.x - 30, this.y + 90, 140, 200, PI, TWO_PI);
+    
+    //creating curved surface of cannon
+    arc(this.x - 30, this.y + 90, 140, 200, PI, TWO_PI); // arc(center_x, center_y, width of inscribing rect, height of inscribing rect, start_angle, end_angle)
     noFill();
   }
 }
